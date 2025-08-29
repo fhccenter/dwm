@@ -20,6 +20,7 @@ static const char *colors[][4]      = {
 };
 
 static const char *const autostart[] = {
+  "alacritty", NULL,
 	NULL /* terminate */
 };
 
