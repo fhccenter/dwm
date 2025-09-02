@@ -2,7 +2,7 @@
 
 status() { \
     # Module Storage
-    storage="^c#d3869b^󰆼^c#b16286^$(df --human --output=avail /dev/mapper/cryptvg-root | sed -n '1!p')"
+    storage="^c#d3869b^󰆼^c#b16286^$(df --human --output=avail /dev/mmcblk0p2 | sed -n '1!p')"
     
     # Module Network
     connection_type=$(ip route | awk '/default/ { gsub(/ /, "", $5); print substr($5,1,2); exit }')
