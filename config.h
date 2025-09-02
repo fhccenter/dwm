@@ -22,6 +22,7 @@ static const char *colors[][4]      = {
 static const char *const autostart[] = {
   "dwmbar", NULL,
 	"refbar", NULL,
+  "alacritty", NULL,
 	NULL /* terminate */
 };
 

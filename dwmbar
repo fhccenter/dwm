@@ -17,29 +17,6 @@ status() { \
 	    network="^c#b8bb26^󰢾 ^c#98971a^$wwan";;	
     esac
 
-    # Module Audio
-    current_sink=$(pactl info | awk -F': ' '/Default Sink/ {split($2, a, "."); gsub(/^[ \t\n]+|[ \t\n]+$/, "", a[1]); print a[1]}')
-    volume=$(pw-volume status | jq -r '.percentage' | cut -d. -f1)
-
-    case $current_sink in
-        alsa_output)
-            # TODO: Add an if statement to see if its also using headphone jack:
-            audio_type="speaker";;
-        bluez_output)
-            audio_type="bluetooth";;
-    esac
-
-    case $audio_type in
-	bluetooth)
-	    audio="^b#83a598^^c#000000^ 󰂯 ^b#458588^^c#000000^ $volume% ";;
-	jack)
-	    audio="^b#83a598^^c#000000^ 󱎔 ^b#458588^^c#000000^ $volume% ";;
-    speaker)
-	    audio="^b#83a598^^c#000000^ 󰓃 ^b#458588^^c#000000^ $volume% ";;
-	*)
-	    :;;
-    esac
-
     # Module Battery
     battery_health=$(cat /sys/class/power_supply/BAT0/capacity)
     charging=$(cat /sys/class/power_supply/AC/online)
