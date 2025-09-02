@@ -41,9 +41,11 @@ install: all
 	cp -f dwm ${DESTDIR}${PREFIX}/bin
 	cp -f dwmbar ${DESTDIR}${PREFIX}/bin
 	cp -f refbar ${DESTDIR}${PREFIX}/bin
+	cp -f dmenu ${DESTDIR}${PREFIX}/bin
 	chmod 755 ${DESTDIR}${PREFIX}/bin/dwmbar
 	chmod 755 ${DESTDIR}${PREFIX}/bin/refbar
 	chmod 755 ${DESTDIR}${PREFIX}/bin/dwm
+	chmod 755 ${DESTDIR}${PREFIX}/bin/dmenu
 	
 	mkdir -p ${DESTDIR}${MANPREFIX}/man1
 	sed "s/VERSION/${VERSION}/g" < dwm.1 > ${DESTDIR}${MANPREFIX}/man1/dwm.1
