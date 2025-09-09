@@ -22,6 +22,7 @@ static const char *colors[][4]      = {
 static const char *const autostart[] = {
   "dwmbar", NULL,
 	"refbar", NULL,
+  "feh", "--bg-scale", "/usr/share/pixmaps/black.png", NULL,
 	NULL /* terminate */
 };
 

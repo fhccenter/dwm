@@ -45,6 +45,7 @@ install: all
 	cp -f dmenu_run ${DESTDIR}${PREFIX}/bin
 	cp -f dmenu_path ${DESTDIR}${PREFIX}/bin
 	cp -f stest ${DESTDIR}${PREFIX}/bin
+	cp -f black.png ${DESTDIR}/usr/share/pixmaps
 	chmod 755 ${DESTDIR}${PREFIX}/bin/dwmbar
 	chmod 755 ${DESTDIR}${PREFIX}/bin/refbar
 	chmod 755 ${DESTDIR}${PREFIX}/bin/dwm
@@ -52,6 +53,7 @@ install: all
 	chmod 755 ${DESTDIR}${PREFIX}/bin/dmenu_run
 	chmod 755 ${DESTDIR}${PREFIX}/bin/dmenu_path
 	chmod 755 ${DESTDIR}${PREFIX}/bin/stest
+	chmod 644 ${DESTDIR}/usr/share/pixmaps/black.png
 	
 	mkdir -p ${DESTDIR}${MANPREFIX}/man1
 	sed "s/VERSION/${VERSION}/g" < dwm.1 > ${DESTDIR}${MANPREFIX}/man1/dwm.1
